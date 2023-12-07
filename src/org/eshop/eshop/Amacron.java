@@ -1,6 +1,7 @@
 package org.eshop.eshop;
 
 import org.eshop.users.Client;
+import org.eshop.users.Guest;
 import org.eshop.users.Seller;
 
 public class Amacron {
@@ -23,5 +24,10 @@ public class Amacron {
         System.out.println("Username: " + seller.getUsername());
         System.out.println("Password: " + seller.getPassword());
         System.out.println("Seller key: " + seller.getSellerKey());
+
+        System.out.println("====================================");
+
+        Guest guest = new Guest();
+        guest.login();
     }
 }
