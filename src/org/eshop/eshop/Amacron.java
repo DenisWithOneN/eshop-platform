@@ -8,5 +8,9 @@ public class Amacron {
 
         Client client = new Client();
         client.signup();
+
+        System.out.println("Client info: ");
+        System.out.println("Username: " + client.getUsername());
+        System.out.println("Password: " + client.getPassword());
     }
 }
