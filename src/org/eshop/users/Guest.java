@@ -1,6 +1,6 @@
 package org.eshop.users;
 
-public class Guest implements User{
+public class Guest implements User {
 
     @Override
     public void signup() {
