@@ -1,6 +1,6 @@
 package org.eshop.products;
 
-public class WalletFactory extends Factory {
+public class WalletProductFactory extends ProductFactory {
 
     public Product createProduct() {
         return new Wallet();

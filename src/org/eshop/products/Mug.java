@@ -5,6 +5,7 @@ public class Mug implements Product {
     private String name;
     private String category;
     private double price;
+    private int stock;
 
     @Override
     public String getName() {
@@ -22,6 +23,11 @@ public class Mug implements Product {
     }
 
     @Override
+    public int getStock() {
+        return stock;
+    }
+
+    @Override
     public void setName(String name) {
         this.name = name;
     }
@@ -34,5 +40,18 @@ public class Mug implements Product {
     @Override
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    @Override
+    public void displayProductInfo() {
+        System.out.println("Product name: " + getName());
+        System.out.println("Product category: " + getCategory());
+        System.out.println("Product price: " + getPrice());
+        System.out.println("Product stock: " + getStock());
     }
 }

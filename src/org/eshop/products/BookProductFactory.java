@@ -1,9 +1,9 @@
 package org.eshop.products;
 
-public class MugFactory extends Factory{
+public class BookProductFactory extends ProductFactory {
 
     @Override
     public Product createProduct() {
-        return new Mug();
+        return new Book();
     }
 }

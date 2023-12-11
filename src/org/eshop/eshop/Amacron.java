@@ -1,9 +1,10 @@
 package org.eshop.eshop;
 
 import org.eshop.entrance.*;
-import org.eshop.products.Factory;
+import org.eshop.products.ProductFactory;
 import org.eshop.products.Product;
-import org.eshop.products.WalletFactory;
+import org.eshop.products.WalletProductFactory;
+import org.eshop.users.Seller;
 
 
 public class Amacron {
@@ -14,14 +15,12 @@ public class Amacron {
         System.out.println("====================================");
         EntranceChoice.enterShop(args);
         System.out.println("====================================");
-        Factory factory = new WalletFactory();
-        Product wallet = factory.createProduct("Wallet", "Accessories", 100);
+        ProductFactory factory = new WalletProductFactory();
+        Product wallet = factory.createProduct("Wallet", "Accessories", 100, 10);
 
-        System.out.println("Product info: ");
-        System.out.println("Name: " + wallet.getName());
-        System.out.println("Category: " + wallet.getCategory());
-        System.out.println("Price: " + wallet.getPrice());
 
+        Seller seller = new Seller();
+        seller.addProduct(factory);
 
 
     }
