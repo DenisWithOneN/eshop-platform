@@ -1,6 +1,5 @@
 package org.eshop.users;
 
-import java.util.Scanner;
 
 public  class Client extends LoggedUser implements User  {
 

@@ -5,16 +5,12 @@ import java.util.Scanner;
 public class EntranceChoice {
 
     public static Entrance getEntrance(int choice) {
-        switch(choice) {
-            case 1:
-                return new ClientEntry();
-            case 2:
-                return new SellerEntry();
-            case 3:
-                return new GuestEntry();
-            default:
-                return null;
-        }
+        return switch (choice) {
+            case 1 -> new ClientEntry();
+            case 2 -> new SellerEntry();
+            case 3 -> new GuestEntry();
+            default -> null;
+        };
     }
 
     public static void enterShop(String[] args) {
@@ -39,10 +35,8 @@ public class EntranceChoice {
                 System.out.println("Invalid choice.");
             }
             // if the choice is 3, then the user is a guest and cannot sign up and automatically logs in
-        } else if (choice == 3){
-            entranceStrategy.LogInShop();
         } else {
-            System.out.println("Invalid choice.");
+            entranceStrategy.LogInShop();
         }
     }
 }

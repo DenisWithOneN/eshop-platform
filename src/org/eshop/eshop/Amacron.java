@@ -5,10 +5,6 @@ import org.eshop.products.Factory;
 import org.eshop.products.Product;
 import org.eshop.products.WalletFactory;
 
-import java.util.Scanner;
-
-import static org.eshop.entrance.EntranceChoice.getEntrance;
-
 
 public class Amacron {
 
@@ -17,12 +13,7 @@ public class Amacron {
         System.out.println("Welcome to Amacron!");
         System.out.println("====================================");
         EntranceChoice.enterShop(args);
-
-
-
-
-
-
+        System.out.println("====================================");
         Factory factory = new WalletFactory();
         Product wallet = factory.createProduct("Wallet", "Accessories", 100);
 
