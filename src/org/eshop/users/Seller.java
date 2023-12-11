@@ -50,8 +50,10 @@ public class Seller extends LoggedUser implements User {
         String category = scanner.nextLine();
         System.out.print("Enter product price: ");
         double price = scanner.nextDouble();
+        System.out.print("Enter product stock: ");
+        int stock = scanner.nextInt();
         System.out.println("Product added successfully!");
-        return productFactory.createProduct(name, category, price);
+        return productFactory.createProduct(name, category, price, stock);
 
     }
 

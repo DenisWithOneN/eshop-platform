@@ -17,10 +17,14 @@ public class Amacron {
         System.out.println("====================================");
         ProductFactory factory = new WalletProductFactory();
         Product wallet = factory.createProduct("Wallet", "Accessories", 100, 10);
+        wallet.displayProductInfo();
 
 
         Seller seller = new Seller();
         seller.addProduct(factory);
+        factory.displayAllProducts();
+
+
 
 
     }
